@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"net.pl3x.guithium.api"}];updateSearchResults();
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"net.pl3x.guithium.api"},{"l":"net.pl3x.guithium.api.gui"},{"l":"net.pl3x.guithium.api.gui.element"},{"l":"net.pl3x.guithium.api.key"}];updateSearchResults();
