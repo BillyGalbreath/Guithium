@@ -88,7 +88,7 @@ loadScripts(document, 'script');</script>
 </div>
 <section class="class-description" id="class-description">
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../src-html/net/pl3x/guithium/api/Guithium.html#line-12">Guithium</a></span></div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../src-html/net/pl3x/guithium/api/Guithium.html#line-14">Guithium</a></span></div>
 <div class="block">The Guithium API.</div>
 </section>
 <section class="summary">
@@ -119,19 +119,24 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Field</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><code>static final <a href="https://javadoc.io/doc/org.slf4j/slf4j-api/2.0.16/org/slf4j/Logger.html" title="class or interface in org.slf4j" class="external-link">Logger</a></code></div>
-<div class="col-second even-row-color"><code><a href="#logger" class="member-name-link">logger</a></code></div>
+<div class="col-first even-row-color"><code>static final int</code></div>
+<div class="col-second even-row-color"><code><a href="#BSTATS_ID" class="member-name-link">BSTATS_ID</a></code></div>
 <div class="col-last even-row-color">
+<div class="block">bStats ID number for Guithium.</div>
+</div>
+<div class="col-first odd-row-color"><code>static final <a href="https://javadoc.io/doc/org.slf4j/slf4j-api/2.0.16/org/slf4j/Logger.html" title="class or interface in org.slf4j" class="external-link">Logger</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#logger" class="member-name-link">logger</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">Guithium's internal logger.</div>
 </div>
-<div class="col-first odd-row-color"><code>static final <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color"><code><a href="#MOD_ID" class="member-name-link">MOD_ID</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code>static final <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color"><code><a href="#MOD_ID" class="member-name-link">MOD_ID</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">The identifier for this mod.</div>
 </div>
-<div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#PROTOCOL" class="member-name-link">PROTOCOL</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code>static final int</code></div>
+<div class="col-second odd-row-color"><code><a href="#PROTOCOL" class="member-name-link">PROTOCOL</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">The protocol version.</div>
 </div>
 </div>
@@ -163,6 +168,11 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Get the player manager instance.</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://javadoc.io/doc/org.jetbrains/annotations/26.0.2/org/jetbrains/annotations/NotNull.html" title="class or interface in org.jetbrains.annotations" class="external-link">@NotNull</a> <a href="gui/texture/TextureManager.html" title="class in net.pl3x.guithium.api.gui.texture">TextureManager</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTextureManager()" class="member-name-link">getTextureManager</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Get the texture manager instance.</div>
+</div>
 </div>
 </div>
 </div>
@@ -180,7 +190,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="MOD_ID">
 <h3>MOD_ID</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/net/pl3x/guithium/api/Guithium.html#line-16">MOD_ID</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/net/pl3x/guithium/api/Guithium.html#line-18">MOD_ID</a></span></div>
 <div class="block">The identifier for this mod.</div>
 <dl class="notes">
 <dt>See Also:</dt>
@@ -195,7 +205,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="PROTOCOL">
 <h3>PROTOCOL</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../src-html/net/pl3x/guithium/api/Guithium.html#line-23">PROTOCOL</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../src-html/net/pl3x/guithium/api/Guithium.html#line-25">PROTOCOL</a></span></div>
 <div class="block">The protocol version.
  <p>
  This is used to ensure client and server can correctly talk to each other.</p></div>
@@ -210,9 +220,24 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="BSTATS_ID">
+<h3>BSTATS_ID</h3>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../src-html/net/pl3x/guithium/api/Guithium.html#line-30">BSTATS_ID</a></span></div>
+<div class="block">bStats ID number for Guithium.</div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="tag-list">
+<li><a href="../../../../constant-values.html#net.pl3x.guithium.api.Guithium.BSTATS_ID">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="logger">
 <h3>logger</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://javadoc.io/doc/org.slf4j/slf4j-api/2.0.16/org/slf4j/Logger.html" title="class or interface in org.slf4j" class="external-link">Logger</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/net/pl3x/guithium/api/Guithium.html#line-30">logger</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://javadoc.io/doc/org.slf4j/slf4j-api/2.0.16/org/slf4j/Logger.html" title="class or interface in org.slf4j" class="external-link">Logger</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/net/pl3x/guithium/api/Guithium.html#line-37">logger</a></span></div>
 <div class="block">Guithium's internal logger.
  <p>
  <u>For internal use</u>. Please use your own logger.</p></div>
@@ -230,7 +255,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="api()">
 <h3>api</h3>
 <div class="member-signature"><span class="annotations"><a href="https://javadoc.io/doc/org.jetbrains/annotations/26.0.2/org/jetbrains/annotations/NotNull.html" title="class or interface in org.jetbrains.annotations" class="external-link">@NotNull</a>
-</span><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="Guithium.html" title="interface in net.pl3x.guithium.api">Guithium</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/net/pl3x/guithium/api/Guithium.html#line-37">api</a></span>()</div>
+</span><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="Guithium.html" title="interface in net.pl3x.guithium.api">Guithium</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/net/pl3x/guithium/api/Guithium.html#line-44">api</a></span>()</div>
 <div class="block">Get the Guithium API instance.</div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -242,7 +267,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getNetworkHandler()">
 <h3>getNetworkHandler</h3>
 <div class="member-signature"><span class="annotations"><a href="https://javadoc.io/doc/org.jetbrains/annotations/26.0.2/org/jetbrains/annotations/NotNull.html" title="class or interface in org.jetbrains.annotations" class="external-link">@NotNull</a>
-</span><span class="return-type"><a href="network/NetworkHandler.html" title="class in net.pl3x.guithium.api.network">NetworkHandler</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/net/pl3x/guithium/api/Guithium.html#line-47">getNetworkHandler</a></span>()</div>
+</span><span class="return-type"><a href="network/NetworkHandler.html" title="class in net.pl3x.guithium.api.network">NetworkHandler</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/net/pl3x/guithium/api/Guithium.html#line-54">getNetworkHandler</a></span>()</div>
 <div class="block">Get the network handler instance.</div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -254,11 +279,23 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getPlayerManager()">
 <h3>getPlayerManager</h3>
 <div class="member-signature"><span class="annotations"><a href="https://javadoc.io/doc/org.jetbrains/annotations/26.0.2/org/jetbrains/annotations/NotNull.html" title="class or interface in org.jetbrains.annotations" class="external-link">@NotNull</a>
-</span><span class="return-type"><a href="player/PlayerManager.html" title="class in net.pl3x.guithium.api.player">PlayerManager</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/net/pl3x/guithium/api/Guithium.html#line-55">getPlayerManager</a></span>()</div>
+</span><span class="return-type"><a href="player/PlayerManager.html" title="class in net.pl3x.guithium.api.player">PlayerManager</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/net/pl3x/guithium/api/Guithium.html#line-62">getPlayerManager</a></span>()</div>
 <div class="block">Get the player manager instance.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>Player manager</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getTextureManager()">
+<h3>getTextureManager</h3>
+<div class="member-signature"><span class="annotations"><a href="https://javadoc.io/doc/org.jetbrains/annotations/26.0.2/org/jetbrains/annotations/NotNull.html" title="class or interface in org.jetbrains.annotations" class="external-link">@NotNull</a>
+</span><span class="return-type"><a href="gui/texture/TextureManager.html" title="class in net.pl3x.guithium.api.gui.texture">TextureManager</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/net/pl3x/guithium/api/Guithium.html#line-70">getTextureManager</a></span>()</div>
+<div class="block">Get the texture manager instance.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>Texture manager</dd>
 </dl>
 </section>
 </li>
