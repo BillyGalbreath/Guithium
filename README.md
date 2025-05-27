@@ -14,7 +14,7 @@
 [![][Discord Badge]][Discord Url]
 <br>
 [![][bStats Badge]][bStats Url]
-[![][MIT Badge]](LICENSE)
+[![][MIT Badge]][License Url]
 [![][CodeFactor Badge]][CodeFactor Url]
 
 <big><b>Guithium allows [Paper](https://papermc.io/) plugins to add GUIs to [Fabric](https://fabricmc.net/)
@@ -31,9 +31,10 @@ clients.</b></big>
 
 <!-- Links -->
 [Build Url]: https://github.com/pl3x-net/guithium/actions
-[Modrinth Url]: https://modrinth.com/plugin/guithium/
+[Modrinth Url]: https://modrinth.com/project/guithium/
 [Discord Url]: https://pl3x.net/discord
 [bStats Url]: https://bstats.org/plugin/bukkit/Guithium/25813
+[License Url]: https://github.com/pl3x-net/guithium/blob/master/LICENSE
 [CodeFactor Url]: https://www.codefactor.io/repository/github/pl3x-net/guithium
 
 <!-- Images -->

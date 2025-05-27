@@ -15,6 +15,10 @@ ij_visual_guides = none
 ij_wrap_on_typing = false
 
 [*.css]
+indent_size = 2
+tab_width = 2
+ij_continuation_indent_size = 2
+ij_continuation_indent_size = 2
 ij_css_align_closing_brace_with_properties = false
 ij_css_blank_lines_around_nested_selector = 1
 ij_css_blank_lines_between_blocks = 1
@@ -371,6 +375,8 @@ ij_sass_value_alignment = 0
 
 [*.scss]
 indent_size = 2
+tab_width = 2
+ij_continuation_indent_size = 2
 ij_scss_align_closing_brace_with_properties = false
 ij_scss_blank_lines_around_nested_selector = 1
 ij_scss_blank_lines_between_blocks = 1
@@ -622,7 +628,9 @@ ij_shell_switch_cases_indented = false
 ij_shell_use_unix_line_separator = true
 
 [{*.cjs,*.js}]
-ij_continuation_indent_size = 4
+indent_size = 2
+tab_width = 2
+ij_continuation_indent_size = 2
 ij_javascript_align_imports = false
 ij_javascript_align_multiline_array_initializer_expression = false
 ij_javascript_align_multiline_binary_operation = false
