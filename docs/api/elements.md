@@ -60,37 +60,37 @@ Sometimes words just aren't enough, and a more hands-on example speaks volumes m
 <canvas id="canvas" width="512" height="288" style="border:1px solid"></canvas>
 
 <div id="tryit"><table cellpadding="0" cellspacing="0"><tr>
-<td><label style="color:red;">Position X</label></td>
-<td><input type="range" id="posx1" min="-512" max="512" value="0" oninput="sync(this,'posx2')" /></td>
-<td><input type="number" id="posx2" value="0" oninput="sync(this,'posx1')" /></td>
+<td style="background-color:#ff4040;color:black;font-weight:700"><label id="posx">Position X</label></td>
+<td><input type="range" id="posx1" min="-512" max="512" value="0" oninput="sync(this,'posx2')" aria-labelledby="posx" /></td>
+<td><input type="number" id="posx2" value="0" oninput="sync(this,'posx1')" aria-labelledby="posx" /></td>
 </tr><tr>
-<td><label style="color:red;">Position Y</label></td>
-<td><input type="range" id="posy1" min="-288" max="288" value="0" oninput="sync(this,'posy2')" /></td>
-<td><input type="number" id="posy2" value="0" oninput="sync(this,'posy1')" /></td>
+<td style="background-color:#ff4040;color:black;font-weight:700"><label id="posy">Position Y</label></td>
+<td><input type="range" id="posy1" min="-288" max="288" value="0" oninput="sync(this,'posy2')" aria-labelledby="posy" /></td>
+<td><input type="number" id="posy2" value="0" oninput="sync(this,'posy1')" aria-labelledby="posy" /></td>
 </tr><tr>
-<td><label style="color:yellow;">Size X</label></td>
-<td><input type="range" id="sizex1" min="0" max="100" value="50" oninput="sync(this,'sizex2')" /></td>
-<td><input type="number" id="sizex2" value="50" oninput="sync(this,'sizex1')" /></td>
+<td style="background-color:#ffff40;color:black;font-weight:700"><label id="sizex">Size X</label></td>
+<td><input type="range" id="sizex1" min="0" max="100" value="50" oninput="sync(this,'sizex2')" aria-labelledby="sizex" /></td>
+<td><input type="number" id="sizex2" value="50" oninput="sync(this,'sizex1')" aria-labelledby="sizex" /></td>
 </tr><tr>
-<td><label style="color:yellow;">Size Y</label></td>
-<td><input type="range" id="sizey1" min="0" max="100" value="25" oninput="sync(this,'sizey2')" /></td>
-<td><input type="number" id="sizey2" value="25" oninput="sync(this,'sizey1')" /></td>
+<td style="background-color:#ffff40;color:black;font-weight:700"><label id="sizey">Size Y</label></td>
+<td><input type="range" id="sizey1" min="0" max="100" value="25" oninput="sync(this,'sizey2')" aria-labelledby="sizey" /></td>
+<td><input type="number" id="sizey2" value="25" oninput="sync(this,'sizey1')" aria-labelledby="sizey" /></td>
 </tr><tr>
-<td><label style="color:blue;">Anchor X</label></td>
-<td><input type="range" id="anchorx1" min="0" max="1" value="0.5" step="0.01" oninput="sync(this,'anchorx2',2)" /></td>
-<td><input type="number" id="anchorx2" value="0.50" step="0.01" oninput="sync(this,'anchorx1',2)" /></td>
+<td style="background-color:#6060ff;color:black;font-weight:700"><label id="anchorx">Anchor X</label></td>
+<td><input type="range" id="anchorx1" min="0" max="1" value="0.5" step="0.01" oninput="sync(this,'anchorx2',2)" aria-labelledby="anchorx" /></td>
+<td><input type="number" id="anchorx2" value="0.50" step="0.01" oninput="sync(this,'anchorx1',2)" aria-labelledby="anchorx" /></td>
 </tr><tr>
-<td><label style="color:blue;">Anchor Y</label></td>
-<td><input type="range" id="anchory1" min="0" max="1" value="0.5" step="0.01" oninput="sync(this,'anchory2',2)" /></td>
-<td><input type="number" id="anchory2" value="0.50" step="0.01" oninput="sync(this,'anchory1',2)" /></td>
+<td style="background-color:#6060ff;color:black;font-weight:700"><label id="anchory">Anchor Y</label></td>
+<td><input type="range" id="anchory1" min="0" max="1" value="0.5" step="0.01" oninput="sync(this,'anchory2',2)" aria-labelledby="anchory" /></td>
+<td><input type="number" id="anchory2" value="0.50" step="0.01" oninput="sync(this,'anchory1',2)" aria-labelledby="anchory" /></td>
 </tr><tr>
-<td><label style="color:white;">Offset X</label></td>
-<td><input type="range" id="offsetx1" min="0" max="1" value="0.5" step="0.01" oninput="sync(this,'offsetx2',2)" /></td>
-<td><input type="number" id="offsetx2" value="0.50" step="0.01" oninput="sync(this,'offsetx1',2)" /></td>
+<td style="background-color:#d0d0d0;color:black;font-weight:700"><label id="offsetx">Offset X</label></td>
+<td><input type="range" id="offsetx1" min="0" max="1" value="0.5" step="0.01" oninput="sync(this,'offsetx2',2)" aria-labelledby="offsetx" /></td>
+<td><input type="number" id="offsetx2" value="0.50" step="0.01" oninput="sync(this,'offsetx1',2)" aria-labelledby="offsetx" /></td>
 </tr><tr>
-<td><label style="color:white;">Offset Y</label></td>
-<td><input type="range" id="offsety1" min="0" max="1" value="0.5" step="0.01" oninput="sync(this,'offsety2',2);" /></td>
-<td><input type="number" id="offsety2" value="0.50" step="0.01" oninput="sync(this,'offsety1',2);"  /></td>
+<td style="background-color:#d0d0d0;color:black;font-weight:700"><label id="offsety">Offset Y</label></td>
+<td><input type="range" id="offsety1" min="0" max="1" value="0.5" step="0.01" oninput="sync(this,'offsety2',2);" aria-labelledby="offsety" /></td>
+<td><input type="number" id="offsety2" value="0.50" step="0.01" oninput="sync(this,'offsety1',2);" aria-labelledby="offsety"  /></td>
 </tr></table></div>
 
 <script type="text/javascript">
@@ -120,17 +120,17 @@ function draw() {
   const anchorPosY=anchorY+parseInt(posyElement.value);
   ctx.lineWidth=1;
   ctx.clearRect(0,0,width,height);
-  ctx.strokeStyle="red";
+  ctx.strokeStyle="#ff4040";
   ctx.beginPath();ctx.moveTo(anchorPosX,0);ctx.lineTo(anchorPosX,height);ctx.stroke();
   ctx.beginPath();ctx.moveTo(0,anchorPosY);ctx.lineTo(width,anchorPosY);ctx.stroke();
-  ctx.strokeStyle="blue";
+  ctx.strokeStyle="#6060ff";
   ctx.beginPath();ctx.moveTo(anchorX,0);ctx.lineTo(anchorX,height);ctx.stroke();
   ctx.beginPath();ctx.moveTo(0,anchorY);ctx.lineTo(width,anchorY);ctx.stroke();
-  ctx.strokeStyle="#ff00ffff";
+  ctx.strokeStyle="#ff80ff";
   ctx.beginPath();ctx.moveTo(anchorPosX,anchorPosY);ctx.lineTo(anchorX,anchorY);ctx.stroke();
   ctx.lineWidth=2;
-  ctx.strokeStyle="white";
-  ctx.fillStyle="#ffff0040";
+  ctx.strokeStyle="#d0d0d0";
+  ctx.fillStyle="#ffff0060";
   ctx.beginPath();ctx.rect(anchorPosX-(sizex*offsetx),anchorPosY-(sizey*offsety),sizex,sizey);ctx.stroke();ctx.fill();
 }
 draw();
