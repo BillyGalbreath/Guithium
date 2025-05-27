@@ -3,17 +3,17 @@
 $color-scheme: dark;
 
 $body-background-color: $grey-dk-300;       // $grey-dk-300;
-$body-heading-color: $grey-lt-000;          // $grey-lt-000;
-$body-text-color: $grey-lt-000;             // $grey-lt-300;
+$body-heading-color: $grey-lt-100;          // $grey-lt-000;
+$body-text-color: $grey-lt-100;             // $grey-lt-300;
 $link-color: #90caf9;                       // $blue-000;
-$nav-child-link-color: $grey-dk-000;        // $grey-dk-000;
+$nav-child-link-color: $grey-lt-000;        // $grey-dk-000;
 $sidebar-color: $grey-dk-250;               // $grey-dk-300;
 $base-button-color: $grey-dk-200;           // $grey-dk-250;
 $btn-primary-color: #264caf;                // $blue-200;
 $code-background-color: $grey-dk-250;       // #31343f // OneDarkJekyll default for syntax-one-dark-vivid
-$code-linenumber-color: $grey-lt-000;       // #dee2f7 // OneDarkJekyll .nf for syntax-one-dark-vivid
+$code-linenumber-color: $grey-lt-100;       // #dee2f7 // OneDarkJekyll .nf for syntax-one-dark-vivid
 $feedback-color: #26282b;                   // darken($sidebar-color, 2%);
 $table-background-color: $grey-dk-250;      // $grey-dk-250;
 $search-background-color: $grey-dk-250;     // $grey-dk-250;
-$search-result-preview-color: $grey-dk-000; // $grey-dk-000;
-$border-color: $grey-dk-100;                // $grey-dk-200;
+$search-result-preview-color: $grey-lt-000; // $grey-dk-000;
+$border-color: $grey-dk-000;                // $grey-dk-200;

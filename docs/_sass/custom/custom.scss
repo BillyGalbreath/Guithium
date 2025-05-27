@@ -1,3 +1,9 @@
+.site-footer {
+  color: $grey-lt-000;
+}
+.center {
+  text-align: center;
+}
 #logos-svg {
   display: none;
 }
@@ -20,9 +26,6 @@
       }
     }
   }
-}
-.center {
-  text-align: center;
 }
 #tryit {
   width:512px;
