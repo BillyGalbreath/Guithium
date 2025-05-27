@@ -23,6 +23,8 @@
   font-size: 50px !important;
   line-height: 1;
   text-shadow: #00000080 4px 4px 3px;
+  opacity: 0;
+  transition: opacity 0.2s;
 }
 
 #logos-svg {
@@ -65,20 +67,26 @@
 
       &:nth-child(1) {
         padding-left: 10px;
+        width: 20%;
+        min-width: 20%;
         text-align: left;
       }
 
       &:nth-child(2) {
-        width: 80%;
+        width: 60%;
         text-align: center;
 
         input {
-          width: 100%;
+          margin: 0 10px;
+          padding: 3px 0;
+          width: 90%;
         }
       }
 
       &:nth-child(3) {
         padding-right: 10px;
+        width: 20%;
+        min-width: 20%;
         text-align: right;
 
         input {

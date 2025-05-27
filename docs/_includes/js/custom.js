@@ -17,3 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+
+window.addEventListener('load', function() {
+  document.getElementsByClassName("site-title")[0].style.opacity = 1;
+});
