@@ -1,9 +1,28 @@
+@font-face {
+  font-display: swap;
+  font-family: 'hybrid';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/hybrid_b.ttf') format('truetype');
+}
+
 .site-footer {
   color: $grey-lt-000;
 }
 
 .center {
   text-align: center;
+}
+
+.site-title {
+  margin: 0;
+  padding: 0;
+  display: block;
+  text-align: center;
+  font-family: hybrid, system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, sans-serif, "Segoe UI Emoji";
+  font-size: 50px !important;
+  line-height: 1;
+  text-shadow: #00000080 4px 4px 3px;
 }
 
 #logos-svg {
