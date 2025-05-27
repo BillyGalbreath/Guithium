@@ -86,7 +86,7 @@ Sometimes words aren't enough, and a more hands-on explanation speaks volumes mo
 </tr><tr>
 <td><label style="color:white;">Offset Y</label></td>
 <td><input type="range" id="offsety1" min="0" max="1" value="0.5" step="0.01" oninput="sync(this,'offsety2',2);" /></td>
-<td><input type="number" id="offsety2" value="0.50" step="0.01" oninput="sync(this,'offsety1,2');"  /></td>
+<td><input type="number" id="offsety2" value="0.50" step="0.01" oninput="sync(this,'offsety1',2);"  /></td>
 </tr></table></div>
 
 <script type="text/javascript">
