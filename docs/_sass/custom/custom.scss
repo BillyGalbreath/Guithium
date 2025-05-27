@@ -24,3 +24,41 @@
 .center {
   text-align: center;
 }
+#tryit {
+  width:512px;
+  table {
+    line-height:1;
+    td {
+      padding:0;
+      margin:0;
+      &:nth-child(1) {
+        padding-left: 10px;
+        text-align: left;
+      }
+      &:nth-child(2) {
+        text-align: center;
+        input {
+          width: 250px;
+        }
+      }
+      &:nth-child(3) {
+        padding-right: 10px;
+        text-align: right;
+        input {
+          width: 75px;
+          margin: 0;
+          padding: 0;
+          text-align: right;
+          &::-webkit-outer-spin-button,
+          &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+          }
+          &[type=number] {
+            -moz-appearance: textfield;
+          }
+        }
+      }
+    }
+  }
+}

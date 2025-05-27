@@ -10,7 +10,7 @@ has_toc: false
 Image is an element to display a Texture on a Screen.
 
 ### Position
-This is the position on the screen in scaled pixels where 0,0 is the top left of the screen.
+This is the position on the screen in scaled pixels where 0,0 is at the anchor + offset.
 
 Omitting the position will default to `0.0, 0.0`.
 
@@ -61,7 +61,7 @@ Examples:<br>
 `2.0` makes the texture fit `2` times inside the allotted size, showing 4 images tiled in a 2x2.<br>
 `0.5` makes the texture fit `0.5` times inside the allotted size, showing the top left 25% of the image.
 
-# Examples
+## Examples
 
 ### Basic Image
 An example of a basic image
