@@ -15,6 +15,8 @@ You can use textures that are already loaded in the game (from vanilla, or other
 
 Textures require 2 parameters. First one is a unique Key that we use to identify it. The second is where the image file is located.
 
+----
+
 ### Vanilla Textures
 
 For example, to use a vanilla texture:
@@ -26,6 +28,8 @@ Texture texture = new Texture(Key.of("some:unique_key"), "textures/gui/options_b
 Texture texture = new Texture(Key.of("some:unique_key"), "minecraft:textures/gui/options_background.png");
 ```
 
+----
+
 ### Modded Textures
 
 To use a loaded image from another mod just use the mod_id for the namespace:
@@ -34,6 +38,8 @@ To use a loaded image from another mod just use the mod_id for the namespace:
 Texture texture = new Texture(Key.of("some:unique_key"), "mod_id:textures/path/image.png");
 ```
 
+----
+
 ### External Textures
 
 To use an external image from the internet, just use the url (beginning with `http://` or `https://`)
@@ -41,6 +47,8 @@ To use an external image from the internet, just use the url (beginning with `ht
 ```java
 Texture texture = new Texture(Key.of("some:unique_key"), "https://avatars.githubusercontent.com/u/332527?v=4");
 ```
+
+----
 
 # Preloading Textures
 

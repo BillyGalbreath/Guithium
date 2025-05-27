@@ -2,14 +2,56 @@
 title: Elements
 parent: API
 nav_order: 1
-has_toc: true
+has_toc: false
 ---
 
 ## Elements
 
-Some long and boring explanation of elements, positions, sizes, anchors, and offsets goes here.
+All elements have 4 basic properties. It's position, size, anchor point, and offset. These properties are as explained below.
+
+----
+
+### Position
+This is the number of scaled pixels[^1] from the anchor's position.
+
+Omitting the position will default to `0.0, 0.0`.
+
+----
+
+### Size
+This is the size of the element in scaled pixels[^1].
+
+Omitting the size will default to `0.0, 0.0` and cause the element to not appear on the screen.
+
+----
+
+### Anchor
+This is the anchor point where the Position starts from in relation to the screen size. This is a percentage (0.0-1.0), without and upper or lower limits.
+
+Omitting the anchor will default to `0.0, 0.0`.
+
+Examples:<br>
+`0.0, 0.0` will anchor to the top left corner of the screen.<br>
+`0.5, 0.5` will anchor to the center of the screen.<br>
+`1.0, 1.0` will anchor to the bottom right of the screen.
+
+----
+
+### Offset
+This is the offset point where the position aligns on the element in relation to it's size. This is a percentage (0.0-1.0), without any upper or lower limits.
+
+Omitting the offset will default to `0.0, 0.0`.
+
+Examples:<br>
+`0.0, 0.0` results in the top left corner at the anchor + position.<br>
+`0.5, 0.5` results in the center at the anchor + position.<br>
+`1.0, 1.0` results in the bottom right corner at the anchor + position.
+
+----
 
 ### Try It Out!
+
+Sometimes words aren't enough, and a more hands-on explanation speaks volumes more.
 
 <canvas id="canvas" width="512" height="288" style="border:1px solid"></canvas>
 
@@ -48,26 +90,24 @@ Some long and boring explanation of elements, positions, sizes, anchors, and off
 </tr></table></div>
 
 <script type="text/javascript">
-const width = 512;
-const height = 288;
-function sync(input, output, x = 0) {
-  let out = document.getElementById(output);
-  out.value = parseFloat(input.value).toFixed(x);
+const width=512;
+const height=288;
+function sync(input,output,x=0) {
+  document.getElementById(output).value=parseFloat(input.value).toFixed(x);
   draw();
 }
 function draw() {
-  let posx = Number.parseInt(document.getElementById("posx2").value);
-  let posy = Number.parseInt(document.getElementById("posy2").value);
-  let sizex = Number.parseInt(document.getElementById("sizex2").value);
-  let sizey = Number.parseInt(document.getElementById("sizey2").value);
-  let anchorx = Number.parseFloat(document.getElementById("anchorx2").value);
-  let anchory = Number.parseFloat(document.getElementById("anchory2").value);
-  let offsetx = Number.parseFloat(document.getElementById("offsetx2").value);
-  let offsety = Number.parseFloat(document.getElementById("offsety2").value);
-  let ax = width * anchorx;
-  let ay = height * anchory;
-  const canvas = document.getElementById("canvas");
-  const ctx = canvas.getContext("2d");
+  let posx=Number.parseInt(document.getElementById("posx2").value);
+  let posy=Number.parseInt(document.getElementById("posy2").value);
+  let sizex=Number.parseInt(document.getElementById("sizex2").value);
+  let sizey=Number.parseInt(document.getElementById("sizey2").value);
+  let anchorx=Number.parseFloat(document.getElementById("anchorx2").value);
+  let anchory=Number.parseFloat(document.getElementById("anchory2").value);
+  let offsetx=Number.parseFloat(document.getElementById("offsetx2").value);
+  let offsety=Number.parseFloat(document.getElementById("offsety2").value);
+  let ax=width*anchorx;
+  let ay=height*anchory;
+  const ctx=document.getElementById("canvas").getContext("2d");
   ctx.clearRect(0,0,width,height);
   ctx.strokeStyle="red";
   ctx.beginPath();ctx.moveTo(ax+posx,0);ctx.lineTo(ax+posx,height);ctx.stroke();
@@ -83,3 +123,7 @@ function draw() {
 }
 draw();
 </script>
+
+----
+
+[^1]: Scaled pixels are the number of real pixels multiplied by the client's `GUI Scale`. For more information see the [Video Settings](https://minecraft.fandom.com/wiki/Options#Video_Settings) section of the Minecraft wiki.
