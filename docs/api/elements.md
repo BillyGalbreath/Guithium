@@ -15,12 +15,12 @@ Some long and boring explanation of elements, positions, sizes, anchors, and off
 
 <div id="tryit"><table cellpadding="0" cellspacing="0"><tr>
 <td><label style="color:red;">Position X</label></td>
-<td><input type="range" id="posx1" min="0" max="512" value="0" oninput="sync(this,'posx2')" /></td>
-<td><input type="number" id="posx2" min="0" max="512" value="0" oninput="sync(this,'posx1')" /></td>
+<td><input type="range" id="posx1" min="-512" max="512" value="0" oninput="sync(this,'posx2')" /></td>
+<td><input type="number" id="posx2" min="-512" max="512" value="0" oninput="sync(this,'posx1')" /></td>
 </tr><tr>
 <td><label style="color:red;">Position Y</label></td>
-<td><input type="range" id="posy1" min="0" max="288" value="0" oninput="sync(this,'posy2')" /></td>
-<td><input type="number" id="posy2" min="0" max="288" value="0" oninput="sync(this,'posy1')" /></td>
+<td><input type="range" id="posy1" min="-288" max="288" value="0" oninput="sync(this,'posy2')" /></td>
+<td><input type="number" id="posy2" min="-288" max="288" value="0" oninput="sync(this,'posy1')" /></td>
 </tr><tr>
 <td><label style="color:yellow;">Size X</label></td>
 <td><input type="range" id="sizex1" min="0" max="100" value="50" oninput="sync(this,'sizex2')" /></td>
