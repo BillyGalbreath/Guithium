@@ -1,18 +1,18 @@
 {% if site.nav_external_links %}
 <div id="external-links">
-    {% for node in site.nav_external_links %}
-    {% if node.image %}
-    <a href="{{ node.url | absolute_url }}"
-       {% if node.opens_in_new_tab %}
-       target="_blank" rel="noopener noreferrer"
-       {% endif %}
-    >
-        <svg>
-            <title>{{ node.alt }}</title>
-            <use href="{{ site.baseurl }}{{ node.image }}"/>
-        </svg>
-    </a>
+  {% for node in site.nav_external_links %}
+  {% if node.image %}
+  <a href="{{ node.url | absolute_url }}"
+    {% if node.opens_in_new_tab %}
+    target="_blank" rel="noopener noreferrer"
     {% endif %}
-    {% endfor %}
+  >
+    <svg>
+      <title>{{ node.alt }}</title>
+      <use href="{{ site.baseurl }}{{ node.image }}"/>
+    </svg>
+  </a>
+  {% endif %}
+  {% endfor %}
 </div>
 {% endif %}

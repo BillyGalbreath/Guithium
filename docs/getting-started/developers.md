@@ -6,8 +6,6 @@ nav_order: 2
 
 ## Developers
 
-
-
 Javadoc: [https://jd.pl3x.net/net/pl3x/guithium/guithium-api/latest/](https://jd.pl3x.net/net/pl3x/guithium/guithium-api/latest/)
 
 Repository (Gradle)

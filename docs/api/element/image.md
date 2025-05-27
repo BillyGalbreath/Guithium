@@ -12,6 +12,7 @@ Image is an element to display a texture.
 ----
 
 ### Texture
+
 This is the texture to draw. It can be a static PNG image or animated gif loaded from a namespace pointing to a minecraft (including modded) resource, or a url from the internet.
 
 See the [Texture](../texture.html) documentation to learn more.
@@ -19,6 +20,7 @@ See the [Texture](../texture.html) documentation to learn more.
 ----
 
 ### Vertex Color
+
 This controls how much of a texture's colors show through on the screen. See Mojang's [position texture color fragment shader](https://mcasset.cloud/1.19.2/assets/minecraft/shaders/core/position_tex_color.fsh) for details.
 
 E.g., a modifier of `0xFF00FFFF` will remove all red from the texture.
@@ -28,6 +30,7 @@ Omitting the vertex color will default to `0xFFFFFFFF` (opaque white).
 ----
 
 ### TileModifier
+
 This is used to divide the UV into tiled segments on each axis (repeat).
 
 E.g., a value of 32 is used on vanilla option screens with the dirt texture in order to get the tiled effect. This does <em>not</em> mean it is tiled 32 times.
@@ -44,7 +47,9 @@ Examples:<br>
 ## Examples
 
 ### Basic Image
+
 An example of a basic image
+
 ```java
 Image image = Image.builder("my_plugin:github")
     .setPos(0, 20)
@@ -54,9 +59,11 @@ Image image = Image.builder("my_plugin:github")
 ```
 
 ### Tiled Image
+
 An example of a tiled image.
 
 **Note**: *This Image is provided to you at `Image.TILED_DIRT` since it is a common Image (used in options screens).*
+
 ```java
 public static final Image TILED_DIRT = Image.builder("guithium:tiled_dirt")
         .setTexture(new Texture("minecraft:dirt", "textures/gui/options_background.png"))

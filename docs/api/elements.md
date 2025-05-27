@@ -12,6 +12,7 @@ All elements have 4 basic properties. It's position, size, anchor point, and off
 ----
 
 ### Position
+
 This is the number of scaled pixels[^1] from the anchor's position.
 
 Omitting the position will default to `0.0, 0.0`.
@@ -19,6 +20,7 @@ Omitting the position will default to `0.0, 0.0`.
 ----
 
 ### Size
+
 This is the size of the element in scaled pixels[^1].
 
 Omitting the size will default to `0.0, 0.0` and cause the element to not appear on the screen.
@@ -26,6 +28,7 @@ Omitting the size will default to `0.0, 0.0` and cause the element to not appear
 ----
 
 ### Anchor
+
 This is the anchor point where the Position starts from in relation to the screen size. This is a percentage (0.0-1.0), without and upper or lower limits.
 
 Omitting the anchor will default to `0.0, 0.0`.
@@ -38,6 +41,7 @@ Examples:<br>
 ----
 
 ### Offset
+
 This is the offset point where the position aligns on the element in relation to it's size. This is a percentage (0.0-1.0), without any upper or lower limits.
 
 Omitting the offset will default to `0.0, 0.0`.
@@ -92,36 +96,42 @@ Sometimes words just aren't enough, and a more hands-on example speaks volumes m
 <script type="text/javascript">
 const width=512;
 const height=288;
+const posxElement=document.getElementById("posx2");
+const posyElement=document.getElementById("posy2");
+const sizexElement=document.getElementById("sizex2");
+const sizeyElement=document.getElementById("sizey2");
+const anchorxElement=document.getElementById("anchorx2");
+const anchoryElement=document.getElementById("anchory2");
+const offsetxElement=document.getElementById("offsetx2");
+const offsetyElement=document.getElementById("offsety2");
+const ctx=document.getElementById("canvas").getContext("2d");
 function sync(input,output,x=0) {
   document.getElementById(output).value=parseFloat(input.value).toFixed(x);
   draw();
 }
 function draw() {
-  let posx=Number.parseInt(document.getElementById("posx2").value);
-  let posy=Number.parseInt(document.getElementById("posy2").value);
-  let sizex=Number.parseInt(document.getElementById("sizex2").value);
-  let sizey=Number.parseInt(document.getElementById("sizey2").value);
-  let anchorx=Number.parseFloat(document.getElementById("anchorx2").value);
-  let anchory=Number.parseFloat(document.getElementById("anchory2").value);
-  let offsetx=Number.parseFloat(document.getElementById("offsetx2").value);
-  let offsety=Number.parseFloat(document.getElementById("offsety2").value);
-  let ax=width*anchorx;
-  let ay=height*anchory;
-  const ctx=document.getElementById("canvas").getContext("2d");
-  ctx.lineWidth = 1;
+  const sizex=parseInt(sizexElement.value);
+  const sizey=parseInt(sizeyElement.value);
+  const offsetx=parseFloat(offsetxElement.value);
+  const offsety=parseFloat(offsetyElement.value);
+  const anchorX=width*parseFloat(anchorxElement.value);
+  const anchorY=height*parseFloat(anchoryElement.value);
+  const anchorPosX=anchorX+parseInt(posxElement.value);
+  const anchorPosY=anchorY+parseInt(posyElement.value);
+  ctx.lineWidth=1;
   ctx.clearRect(0,0,width,height);
   ctx.strokeStyle="red";
-  ctx.beginPath();ctx.moveTo(ax+posx,0);ctx.lineTo(ax+posx,height);ctx.stroke();
-  ctx.beginPath();ctx.moveTo(0,ay+posy);ctx.lineTo(width,ay+posy);ctx.stroke();
+  ctx.beginPath();ctx.moveTo(anchorPosX,0);ctx.lineTo(anchorPosX,height);ctx.stroke();
+  ctx.beginPath();ctx.moveTo(0,anchorPosY);ctx.lineTo(width,anchorPosY);ctx.stroke();
   ctx.strokeStyle="blue";
-  ctx.beginPath();ctx.moveTo(ax,0);ctx.lineTo(ax,height);ctx.stroke();
-  ctx.beginPath();ctx.moveTo(0,ay);ctx.lineTo(width,ay);ctx.stroke();
+  ctx.beginPath();ctx.moveTo(anchorX,0);ctx.lineTo(anchorX,height);ctx.stroke();
+  ctx.beginPath();ctx.moveTo(0,anchorY);ctx.lineTo(width,anchorY);ctx.stroke();
   ctx.strokeStyle="#ff00ffff";
-  ctx.beginPath();ctx.moveTo(ax+posx,ay+posy);ctx.lineTo(ax,ay);ctx.stroke();
-  ctx.lineWidth = 2;
+  ctx.beginPath();ctx.moveTo(anchorPosX,anchorPosY);ctx.lineTo(anchorX,anchorY);ctx.stroke();
+  ctx.lineWidth=2;
   ctx.strokeStyle="white";
   ctx.fillStyle="#ffff0040";
-  ctx.beginPath();ctx.rect(ax+posx-(sizex*offsetx),ay+posy-(sizey*offsety),sizex,sizey);ctx.stroke();ctx.fill();
+  ctx.beginPath();ctx.rect(anchorPosX-(sizex*offsetx),anchorPosY-(sizey*offsety),sizex,sizey);ctx.stroke();ctx.fill();
 }
 draw();
 </script>
