@@ -51,7 +51,7 @@ Examples:<br>
 
 ### Try It Out!
 
-Sometimes words aren't enough, and a more hands-on explanation speaks volumes more.
+Sometimes words just aren't enough, and a more hands-on example speaks volumes more.
 
 <canvas id="canvas" width="512" height="288" style="border:1px solid"></canvas>
 
@@ -108,6 +108,7 @@ function draw() {
   let ax=width*anchorx;
   let ay=height*anchory;
   const ctx=document.getElementById("canvas").getContext("2d");
+  ctx.lineWidth = 1;
   ctx.clearRect(0,0,width,height);
   ctx.strokeStyle="red";
   ctx.beginPath();ctx.moveTo(ax+posx,0);ctx.lineTo(ax+posx,height);ctx.stroke();
@@ -115,10 +116,11 @@ function draw() {
   ctx.strokeStyle="blue";
   ctx.beginPath();ctx.moveTo(ax,0);ctx.lineTo(ax,height);ctx.stroke();
   ctx.beginPath();ctx.moveTo(0,ay);ctx.lineTo(width,ay);ctx.stroke();
-  ctx.strokeStyle="#ffff00ff";
+  ctx.strokeStyle="#ff00ffff";
   ctx.beginPath();ctx.moveTo(ax+posx,ay+posy);ctx.lineTo(ax,ay);ctx.stroke();
+  ctx.lineWidth = 2;
   ctx.strokeStyle="white";
-  ctx.fillStyle="#ffff0048";
+  ctx.fillStyle="#ffff0040";
   ctx.beginPath();ctx.rect(ax+posx-(sizex*offsetx),ay+posy-(sizey*offsety),sizex,sizey);ctx.stroke();ctx.fill();
 }
 draw();
