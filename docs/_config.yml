@@ -24,7 +24,7 @@ color_scheme: guithium
 #logo: "/assets/images/just-the-docs.png"
 
 # Set a path/url to a favicon that will be displayed by the browser
-favicon_ico: "/assets/images/favicon.ico"
+favicon_ico: "/favicon.ico"
 
 # Enable or disable the side/mobile menu globally
 # Nav menu can also be selectively enabled or disabled using page variables or the minimal layout
