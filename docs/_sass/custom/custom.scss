@@ -27,6 +27,18 @@
   transition: opacity 0.2s;
 }
 
+a, p, div, input, label {
+  text-shadow: #00000080 2px 2px 4px;
+}
+
+svg {
+  filter: drop-shadow(2px 2px 4px #00000080);
+}
+
+.main-content ol > li::before {
+  color: $grey-lt-000 !important;
+}
+
 #logos-svg {
   display: none;
 }
@@ -75,6 +87,7 @@
       &:nth-child(2) {
         width: 60%;
         text-align: center;
+        touch-action: none;
 
         input {
           margin: 0 10px;
