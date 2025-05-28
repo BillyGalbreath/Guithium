@@ -112,3 +112,20 @@ svg {
     }
   }
 }
+
+.integrations table td a {
+  margin: 3px;
+
+  svg {
+    width: 24px;
+    height: 24px;
+    color: $body-text-color;
+    transition: 0.3s;
+    filter: drop-shadow(2px 2px 2px #00000080);
+
+    &:hover {
+      color: $body-background-color;
+      filter: drop-shadow(0 0 3px $body-heading-color);
+    }
+  }
+}
