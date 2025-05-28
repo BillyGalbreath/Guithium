@@ -13,13 +13,13 @@ nav_order: 1
 
 <br>
 
-[![][Build Badge]][Build Url]{:target="_blank"}
-[![][Downloads Badge]][Modrinth Url]{:target="_blank"}
-[![][Discord Badge]][Discord Url]{:target="_blank"}
+[![Build Status][Build Badge]][Build Url]{:target="_blank"}
+[![Downloads Count][Downloads Badge]][Modrinth Url]{:target="_blank"}
+[![Join Us On Discord][Discord Badge]][Discord Url]{:target="_blank"}
 <br>
-[![][bStats Badge]][bStats Url]{:target="_blank"}
-[![][MIT Badge]][License Url]{:target="_blank"}
-[![][CodeFactor Badge]][CodeFactor Url]{:target="_blank"}
+[![bStats Server Count][bStats Badge]][bStats Url]{:target="_blank"}
+[![MIT License][MIT Badge]][License Url]{:target="_blank"}
+[![CodeFactor Grade][CodeFactor Badge]][CodeFactor Url]{:target="_blank"}
 <br>
 
 <big><b>Guithium allows [Paper](https://papermc.io/){:target="_blank"} plugins to add GUIs to [Fabric](https://fabricmc.net/){:target="_blank"}
