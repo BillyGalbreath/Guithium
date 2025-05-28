@@ -1,0 +1,11 @@
+{% if site.logo %}
+  <div class="site-logo" role="img" aria-label="{{ site.title }}"></div>
+{% else %}
+  {{ site.title }}
+{% endif %}
+
+{% raw %}
+<script>
+  document.fonts.ready.then(()=> document.getElementsByClassName("site-title")[0].style.opacity = '1');
+</script>
+{% endraw %}
