@@ -9,11 +9,10 @@ Element.prototype.removeAttribute = function (attr) {
 
 // always expand main navigation for ease of use
 document.addEventListener('DOMContentLoaded', function () {
-  const elements = document.querySelectorAll('button[aria-pressed]');
-  elements.forEach(element => {
-    if (element.classList.contains('nav-list-expander')) {
-      element.parentElement.classList.add('active');
-      element.setAttribute('aria-pressed', 'true');
+  document.querySelectorAll('button[aria-pressed]').forEach(el => {
+    if (el.classList.contains('nav-list-expander')) {
+      el.parentElement.classList.add('active');
+      el.setAttribute('aria-pressed', 'true');
     }
   });
 });
