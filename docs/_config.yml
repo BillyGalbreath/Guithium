@@ -135,3 +135,6 @@ callouts:
   cons:
     title: Cons
     color: red
+
+sass:
+  style: compressed
