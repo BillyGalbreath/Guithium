@@ -106,17 +106,7 @@ svg {
           width: 75px;
           margin: 0;
           padding: 0;
-          text-align: right;
-
-          &::-webkit-outer-spin-button,
-          &::-webkit-inner-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
-          }
-
-          &[type=number] {
-            -moz-appearance: textfield;
-          }
+          text-align: left;
         }
       }
     }
