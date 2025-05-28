@@ -1,8 +1,12 @@
-name: Build Release
-on:
-  push:
-    branches:
-      - "master"
+name: Build
+on: [ push ]
+
+# we combine both release and snapshot builds into
+# the same job to ensure build numbers stay unique
+# and in the proper order.
+
+env:
+  SNAPSHOT: ${{ github.ref_name != 'master' }}
 
 jobs:
   run:
@@ -32,17 +36,32 @@ jobs:
       - name: Set Version Number
         run: |
           VERSION=${{ steps.version.outputs.value }}
+          if [ "$SNAPSHOT" == "true"  ]; then
+            VERSION=$VERSION-SNAPSHOT
+          fi
           echo "VERSION=$VERSION" >> $GITHUB_ENV
           echo "VERSION is $VERSION"
 
       - name: Build Release
+        if: ${{ env.SNAPSHOT != 'true' }}
         run: ./gradlew build publish modrinth --stacktrace --no-daemon
         env:
           MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
           COMMIT_MESSAGE: ${{ join(github.event.commits.*.message, '<br>') }}
 
+      - name: Build Snapshot
+        if: ${{ env.SNAPSHOT == 'true' }}
+        run: ./gradlew build publish --stacktrace --no-daemon
+
+      - name: Upload Snapshot Artifact
+        if: ${{ env.SNAPSHOT == 'true' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: "Guithium-${{ env.VERSION }}"
+          path: build/libs/*.jar
+
       - name: Notify Discord
-        if: ${{ success() }}
+        if: ${{ env.SNAPSHOT != 'true' && success() }}
         uses: sarisia/actions-status-discord@v1
         with:
           webhook: ${{ secrets.DISCORD_BUILDS_WEBHOOK }}
@@ -53,7 +72,7 @@ jobs:
             Click [here](https://modrinth.com/mod/guithium) to download!
 
       - name: Notify Discord
-        if: ${{ failure() }}
+        if: ${{ env.SNAPSHOT != 'true' && failure() }}
         uses: sarisia/actions-status-discord@v1
         with:
           webhook: ${{ secrets.DISCORD_BUILDS_WEBHOOK }}
