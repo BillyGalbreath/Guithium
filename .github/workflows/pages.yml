@@ -32,12 +32,8 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.3'
-          bundler-cache: false
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
           working-directory: '${{ github.workspace }}/docs'
-      - name: Bundle install
-        run: bundle install
-        env:
-          JEKYLL_ENV: production
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
