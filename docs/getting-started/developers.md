@@ -4,7 +4,7 @@ parent: Getting Started
 nav_order: 2
 ---
 
-## Developers
+# Developers
 
 Javadoc: [https://jd.pl3x.net/net/pl3x/guithium/guithium-api/latest/](https://jd.pl3x.net/net/pl3x/guithium/guithium-api/latest/)
 

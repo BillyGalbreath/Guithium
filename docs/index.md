@@ -7,11 +7,7 @@ nav_order: 1
 
 ![Guithium](https://cdn.modrinth.com/data/z2cqY1PE/images/bd4cce870d7950dd3af457e78c379e0c8c17ebc1.png)
 
-<br>
-
 # <b>Guithium Documentation</b>
-
-<br>
 
 [![Build Status][Build Badge]][Build Url]{:target="_blank"}
 [![Downloads Count][Downloads Badge]][Modrinth Url]{:target="_blank"}
@@ -20,6 +16,7 @@ nav_order: 1
 [![bStats Server Count][bStats Badge]][bStats Url]{:target="_blank"}
 [![MIT License][MIT Badge]][License Url]{:target="_blank"}
 [![CodeFactor Grade][CodeFactor Badge]][CodeFactor Url]{:target="_blank"}
+
 <br>
 
 <big><b>Guithium allows [Paper](https://papermc.io/){:target="_blank"} plugins to add GUIs to [Fabric](https://fabricmc.net/){:target="_blank"}

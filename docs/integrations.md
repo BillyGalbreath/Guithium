@@ -8,10 +8,11 @@ github: <svg><title>GitHub</title><use href="/assets/images/logos.svg#github"/><
 discord: <svg><title>Discord</title><use href="/assets/images/logos.svg#discord"/></svg>
 ---
 
-## Integrations
+# Integrations
 
 Here is a list of known plugins that utilize the Guithium API to provide their users a better GUI experience.
 
+<br>
 <div class="integrations" markdown="1">
 
 | Plugin          |                                                                                                                                                                   Links |
@@ -20,4 +21,5 @@ Here is a list of known plugins that utilize the Guithium API to provide their u
 
 </div>
 
-Are you a developer and have integrated Guithium into your plugin and want to see your project listed below? Use the link below to edit this page!
+{: .note }
+Do you know of a plugin that's integrated Guithium not on this list? Let us know on Discord!

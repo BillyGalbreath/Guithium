@@ -5,55 +5,62 @@ nav_order: 1
 has_toc: false
 ---
 
-## Elements
+# Elements
 
 All elements have 4 basic properties. It's position, size, anchor point, and offset. These properties are as explained below.
 
 ----
 
-### Position
+## Position
 
-This is the number of scaled pixels[^1] from the anchor's position.
+This is the number of scaled pixels[^1] from the anchor's position. This is an integer, without any upper or lower limits.
 
-Omitting the position will default to `0.0, 0.0`.
-
-----
-
-### Size
-
-This is the size of the element in scaled pixels[^1].
-
-Omitting the size will default to `0.0, 0.0` and cause the element to not appear on the screen.
+{: .important }
+Omitting the position will default to `0, 0`.
 
 ----
 
-### Anchor
+## Size
 
-This is the anchor point where the Position starts from in relation to the screen size. This is a percentage (0.0-1.0), without and upper or lower limits.
+This is the size of the element in scaled pixels[^1]. This is an integer, without any upper or lower limits.
 
+{: .important }
+Negative values _may_ cause the element to not appear on the screen.
+
+{: .important }
+Omitting the size will default to `0, 0` and cause the element to not appear on the screen.
+
+----
+
+## Anchor
+
+This is the anchor point where the Position starts from in relation to the screen size. This is a floating point percentage (0.0-1.0), without any upper or lower limits.
+
+{: .important }
 Omitting the anchor will default to `0.0, 0.0`.
 
-Examples:<br>
+{: .examples }
 `0.0, 0.0` will anchor to the top left corner of the screen.<br>
 `0.5, 0.5` will anchor to the center of the screen.<br>
 `1.0, 1.0` will anchor to the bottom right of the screen.
 
 ----
 
-### Offset
+## Offset
 
-This is the offset point where the position aligns on the element in relation to it's size. This is a percentage (0.0-1.0), without any upper or lower limits.
+This is the offset point where the position aligns on the element in relation to it's size. This is a floating point percentage (0.0-1.0), without any upper or lower limits.
 
+{: .important }
 Omitting the offset will default to `0.0, 0.0`.
 
-Examples:<br>
+{: .examples }
 `0.0, 0.0` results in the top left corner at the anchor + position.<br>
 `0.5, 0.5` results in the center at the anchor + position.<br>
 `1.0, 1.0` results in the bottom right corner at the anchor + position.
 
 ----
 
-### Try It Out!
+## Try It Out!
 
 Sometimes words just aren't enough, and a more hands-on example speaks volumes more.
 

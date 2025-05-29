@@ -35,6 +35,12 @@ svg {
   filter: drop-shadow(2px 2px 4px #00000080);
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin: 40px 0 25px !important;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 .main-content ol > li::before {
   color: $grey-lt-000 !important;
 }
@@ -131,8 +137,6 @@ svg {
 }
 
 .faq {
-  padding: 10px 0 10px 0;
-
   details {
     margin: 20px 0;
     padding: 10px 20px;
@@ -149,8 +153,6 @@ svg {
       margin: 0 15px;
       font-weight: bold;
       list-style: none;
-      -webkit-user-select: none;
-      user-select: none;
 
       &::-webkit-details-marker {
         display: none
@@ -165,7 +167,7 @@ svg {
     }
 
     p {
-      margin: 0 0 0 25px;
+      margin: 5px 0 0 25px;
       font-weight: normal;
       font-style: italic;
     }

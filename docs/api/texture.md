@@ -5,7 +5,7 @@ nav_order: 3
 has_toc: false
 ---
 
-## Texture
+# Texture
 
 *This needs updating. Was pulled from the old wiki. Information is likely outdated*
 
@@ -17,7 +17,7 @@ Textures require 2 parameters. First one is a unique Key that we use to identify
 
 ----
 
-### Vanilla Textures
+## Vanilla Textures
 
 For example, to use a vanilla texture:
 
@@ -30,7 +30,7 @@ Texture texture = new Texture(Key.of("some:unique_key"), "minecraft:textures/gui
 
 ----
 
-### Modded Textures
+## Modded Textures
 
 To use a loaded image from another mod just use the mod_id for the namespace:
 
@@ -40,7 +40,7 @@ Texture texture = new Texture(Key.of("some:unique_key"), "mod_id:textures/path/i
 
 ----
 
-### External Textures
+## External Textures
 
 To use an external image from the internet, just use the url (beginning with `http://` or `https://`)
 
@@ -50,7 +50,7 @@ Texture texture = new Texture(Key.of("some:unique_key"), "https://avatars.github
 
 ----
 
-# Preloading Textures
+## Preloading Textures
 
 If you are using textures from the internet, they will have to be loaded into memory during runtime. Normally textures are loaded when the game does that huge loading bar overlay (starting the game and loading resource packs), and takes quite some time to do.
 

@@ -3,14 +3,13 @@ title: F.A.Q.
 nav_order: 2
 has_toc: false
 questions:
-  Can we _get rid_ of vanilla UI elements with Guithium?: Yes! (w.i.p.)
+  Can we <em>get rid</em> of vanilla UI elements with Guithium?: Yes! (w.i.p.)
   Some other question?: Really smart answer! \o/
   Why are there not a lot of questions here?: Because no one is asking me many questions, yet. Join me on Discord and start asking me stuff :P (invite link at the top of every page and in the left navigation)
 ---
 
-## Frequently Asked Questions
+# Frequently Asked Questions
 
-<br>
 Below are some of the most asked questions about Guithium.
 
 <div class="faq">
