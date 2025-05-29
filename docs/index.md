@@ -10,8 +10,8 @@ nav_order: 1
 # <b>Guithium Documentation</b>
 
 <br>
-<big><b>Guithium allows [Paper](https://papermc.io/){:target="_blank"} plugins to add GUIs to [Fabric](https://fabricmc.net/){:target="_blank"}
-clients.</b></big>
+<b style="font-size: 20px">Guithium allows [Paper](https://papermc.io/){:target="_blank"} plugins to add GUIs to [Fabric](https://fabricmc.net/){:target="_blank"}
+clients.</b>
 
 <br>
 

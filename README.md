@@ -17,8 +17,8 @@
 [![][MIT Badge]][License Url]
 [![][CodeFactor Badge]][CodeFactor Url]
 
-<big><b>Guithium allows [Paper](https://papermc.io/) plugins to add GUIs to [Fabric](https://fabricmc.net/)
-clients.</b></big>
+<b style="font-size: 20px">Guithium allows [Paper](https://papermc.io/) plugins to add GUIs to [Fabric](https://fabricmc.net/)
+clients.</b>
 
 </div>
 
