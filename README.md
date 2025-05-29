@@ -29,6 +29,10 @@ clients.</b></big>
 * Maven Repo: https://repo.pl3x.net/#/public/net/pl3x/guithium/guithium-api/
 * Javadoc: https://jd.pl3x.net/net/pl3x/guithium/guithium-api/latest/
 
+## bStats
+
+[![bStats Graph Data](https://bstats.org/signatures/bukkit/Guithium.svg)][bStats Url]
+
 <!-- Links -->
 [Build Url]: https://github.com/pl3x-net/guithium/actions
 [Modrinth Url]: https://modrinth.com/project/guithium/
