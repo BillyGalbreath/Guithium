@@ -6,13 +6,3 @@ Element.prototype.removeAttribute = function (attr) {
   }
   realRemoveAttr(attr);
 }
-
-// always expand main navigation for ease of use
-document.addEventListener('DOMContentLoaded', function () {
-  document.querySelectorAll('button[aria-pressed]').forEach(el => {
-    if (el.classList.contains('nav-list-expander')) {
-      el.parentElement.classList.add('active');
-      el.setAttribute('aria-pressed', 'true');
-    }
-  });
-});
