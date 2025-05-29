@@ -46,10 +46,11 @@ public class RenderableCircle extends AbstractWidget implements RenderableWidget
 
     @Override
     public void init() {
-        // update pos/size
+        // update initial position
         setX((int) getElement().getPos().getX());
         setY((int) getElement().getPos().getY());
 
+        // update radius
         if (getElement().getRadius() != null) {
             this.radius = getElement().getRadius();
         } else {
@@ -59,15 +60,22 @@ public class RenderableCircle extends AbstractWidget implements RenderableWidget
             );
         }
 
+        // update size
         setWidth(this.radius * 2);
         setHeight(this.radius * 2);
 
         // recalculate position on screen
         this.self.calcScreenPos(getWidth(), getHeight());
 
+        // move over to compensate for radius
+        setX(getX() + this.radius);
+        setY(getY() + this.radius);
+
+        // set colors
         this.innerColor = getElement().getInnerColor();
         this.outerColor = getElement().getOuterColor();
 
+        // how much of a circle is this circle
         this.resolution = Numbers.unbox(getElement().getResolution(), this.radius);
     }
 
