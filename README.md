@@ -2,9 +2,9 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.modrinth.com/data/z2cqY1PE/images/bd4cce870d7950dd3af457e78c379e0c8c17ebc1.png">
-  <source media="(prefers-color-scheme: light)" srcset="https://cdn.modrinth.com/data/z2cqY1PE/images/bd4cce870d7950dd3af457e78c379e0c8c17ebc1.png">
-  <img src="https://cdn.modrinth.com/data/z2cqY1PE/images/bd4cce870d7950dd3af457e78c379e0c8c17ebc1.png" alt="Guithium">
+  <source media="(prefers-color-scheme: dark)" srcset="./docs/assets/images/screenshot.webp">
+  <source media="(prefers-color-scheme: light)" srcset="./docs/assets/images/screenshot.webp">
+  <img src="./docs/assets/images/screenshot.webp" alt="Guithium" width="700" height="425">
 </picture>
 
 # Guithium
@@ -31,7 +31,11 @@ clients.</b></big>
 
 ## bStats
 
-[![bStats Graph Data](https://bstats.org/signatures/bukkit/Guithium.svg)][bStats Url]
+<div align="center">
+
+[<img src="https://bstats.org/signatures/bukkit/Guithium.svg" alt="bStats Graph Data" width="700" />][bStats Url]
+
+</div>
 
 <!-- Links -->
 [Build Url]: https://github.com/pl3x-net/guithium/actions

@@ -5,7 +5,7 @@ nav_order: 1
 
 <div class="center" markdown="1">
 
-![Guithium](/assets/images/screenshot.webp)
+<img src="/assets/images/screenshot.webp" alt="Guithium" width="700" height="425" />
 
 # <b>Guithium Documentation</b>
 
