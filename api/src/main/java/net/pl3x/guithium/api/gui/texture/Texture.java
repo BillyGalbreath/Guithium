@@ -27,7 +27,7 @@ public class Texture extends Keyed {
      * @param key Unique identifying key
      * @param url URL or resource location
      */
-    protected Texture(@NotNull Key key, @NotNull String url) {
+    public Texture(@NotNull Key key, @NotNull String url) {
         super(key);
         Preconditions.checkNotNull(url, "Url cannot be null");
         this.url = url;

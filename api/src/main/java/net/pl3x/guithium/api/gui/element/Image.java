@@ -82,6 +82,30 @@ public class Image extends Rect<Image> {
     /**
      * Set the image's texture.
      *
+     * @param id  Unique identifying key
+     * @param url URL or resource location
+     * @return This image
+     */
+    @NotNull
+    public Image setTexture(@NotNull String id, @NotNull String url) {
+        return setTexture(Texture.of(id, url));
+    }
+
+    /**
+     * Set the image's texture.
+     *
+     * @param key Unique identifying key
+     * @param url URL or resource location
+     * @return This image
+     */
+    @NotNull
+    public Image setTexture(@NotNull Key key, @NotNull String url) {
+        return setTexture(Texture.of(key, url));
+    }
+
+    /**
+     * Set the image's texture.
+     *
      * @param texture Image texture
      * @return This image
      */
@@ -102,6 +126,20 @@ public class Image extends Rect<Image> {
     @Nullable
     public Vec4 getUV() {
         return this.uv;
+    }
+
+    /**
+     * Set the texture UV.
+     *
+     * @param x X value
+     * @param y Y value
+     * @param z Z value
+     * @param w W value
+     * @return This image
+     */
+    @NotNull
+    public Image setUV(float x, float y, float z, float w) {
+        return setUV(Vec4.of(x, y, z, w));
     }
 
     /**
