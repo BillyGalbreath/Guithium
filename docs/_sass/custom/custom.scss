@@ -3,7 +3,7 @@
   font-family: 'hybrid';
   font-style: normal;
   font-weight: 400;
-  src: url('/assets/hybrid_b.ttf') format('truetype');
+  src: url('/assets/hybrid_b.woff2') format('woff2');
 }
 
 .site-footer {
@@ -23,8 +23,6 @@
   font-size: 50px !important;
   line-height: 1;
   text-shadow: #00000080 4px 4px 3px;
-  opacity: 0;
-  transition: opacity 0.2s;
 }
 
 a, p, div, input, label {
