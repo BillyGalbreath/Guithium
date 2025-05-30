@@ -5,6 +5,8 @@ import net.pl3x.guithium.api.Guithium;
 import net.pl3x.guithium.api.gui.element.ClickableElement;
 import net.pl3x.guithium.api.gui.element.Element;
 import net.pl3x.guithium.api.gui.element.ValueElement;
+import net.pl3x.guithium.api.gui.hud.Render;
+import net.pl3x.guithium.api.gui.hud.Settings;
 import net.pl3x.guithium.api.network.PacketListener;
 import net.pl3x.guithium.api.network.packet.CloseScreenPacket;
 import net.pl3x.guithium.api.network.packet.ElementChangedValuePacket;
@@ -12,6 +14,7 @@ import net.pl3x.guithium.api.network.packet.ElementClickedPacket;
 import net.pl3x.guithium.api.network.packet.ElementPacket;
 import net.pl3x.guithium.api.network.packet.HelloPacket;
 import net.pl3x.guithium.api.network.packet.OpenScreenPacket;
+import net.pl3x.guithium.api.network.packet.SettingsPacket;
 import net.pl3x.guithium.api.network.packet.TexturesPacket;
 import net.pl3x.guithium.fabric.GuithiumMod;
 import net.pl3x.guithium.fabric.gui.screen.AbstractScreen;
@@ -50,7 +53,7 @@ public class FabricPacketListener implements PacketListener {
         }
 
         // check hud screens for the element
-        for (AbstractScreen screen : this.mod.getHudManager().getAllScreens().values()) {
+        for (AbstractScreen screen : this.mod.getHudManager().getAll().values()) {
             if (screen.updateElement(element)) {
                 return;
             }
@@ -108,5 +111,18 @@ public class FabricPacketListener implements PacketListener {
         }
 
         Guithium.logger.info("Server responded with correct protocol ({})", protocol);
+    }
+
+    @Override
+    public void handleSettings(@NotNull SettingsPacket packet) {
+        Settings<Render> settings;
+        if (packet.isGlobal()) {
+            settings = this.mod.getHudManager().getGlobalSettings();
+        } else {
+            settings = this.mod.getHudManager().getPlayerSettings();
+        }
+        for (Render render : Render.values()) {
+            settings.set(render, packet.getSettings().get(render));
+        }
     }
 }

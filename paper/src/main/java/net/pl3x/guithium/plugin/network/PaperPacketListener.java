@@ -10,6 +10,8 @@ import net.pl3x.guithium.api.action.actions.player.screen.element.ElementValueCh
 import net.pl3x.guithium.api.gui.Screen;
 import net.pl3x.guithium.api.gui.element.ClickableElement;
 import net.pl3x.guithium.api.gui.element.ValueElement;
+import net.pl3x.guithium.api.gui.hud.Render;
+import net.pl3x.guithium.api.gui.hud.Settings;
 import net.pl3x.guithium.api.gui.texture.Texture;
 import net.pl3x.guithium.api.network.PacketListener;
 import net.pl3x.guithium.api.network.packet.CloseScreenPacket;
@@ -18,6 +20,7 @@ import net.pl3x.guithium.api.network.packet.ElementClickedPacket;
 import net.pl3x.guithium.api.network.packet.ElementPacket;
 import net.pl3x.guithium.api.network.packet.HelloPacket;
 import net.pl3x.guithium.api.network.packet.OpenScreenPacket;
+import net.pl3x.guithium.api.network.packet.SettingsPacket;
 import net.pl3x.guithium.api.network.packet.TexturesPacket;
 import net.pl3x.guithium.plugin.player.PaperPlayer;
 import org.jetbrains.annotations.NotNull;
@@ -149,8 +152,18 @@ public class PaperPacketListener implements PacketListener {
             this.player.getConnection().send(new TexturesPacket(textures));
         }
 
+        // tell client about global hud settings
+        Settings<Render> settings = Guithium.api().getHudManager().getGlobalSettings();
+        this.player.getConnection().send(new SettingsPacket(true, settings));
+
         // tell other plugins about this hello
         PlayerJoinedAction action = new PlayerJoinedAction(this.player);
         Guithium.api().getActionRegistry().callAction(action);
+    }
+
+    @Override
+    public void handleSettings(@NotNull SettingsPacket packet) {
+        // client does not send this packet to the server
+        throw new UnsupportedOperationException("Not supported on server.");
     }
 }

@@ -4,7 +4,9 @@ import java.util.UUID;
 import net.pl3x.guithium.api.Guithium;
 import net.pl3x.guithium.api.Unsafe;
 import net.pl3x.guithium.api.gui.Screen;
+import net.pl3x.guithium.api.gui.hud.Render;
 import net.pl3x.guithium.api.player.WrappedPlayer;
+import net.pl3x.guithium.api.gui.hud.Settings;
 import net.pl3x.guithium.plugin.network.PaperConnection;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
@@ -13,6 +15,7 @@ import org.jetbrains.annotations.Nullable;
 public class PaperPlayer implements WrappedPlayer {
     private final Player player;
     private final PaperConnection connection;
+    private final Settings<Render> settings = new Settings<>(Render.values());
 
     private Screen currentScreen;
     private int protocol = -1;
@@ -43,6 +46,12 @@ public class PaperPlayer implements WrappedPlayer {
     @NotNull
     public PaperConnection getConnection() {
         return this.connection;
+    }
+
+    @Override
+    @NotNull
+    public Settings<Render> getSettings() {
+        return this.settings;
     }
 
     @Override

@@ -8,6 +8,7 @@ import net.pl3x.guithium.api.network.packet.ElementClickedPacket;
 import net.pl3x.guithium.api.network.packet.ElementPacket;
 import net.pl3x.guithium.api.network.packet.HelloPacket;
 import net.pl3x.guithium.api.network.packet.OpenScreenPacket;
+import net.pl3x.guithium.api.network.packet.SettingsPacket;
 import net.pl3x.guithium.api.network.packet.TexturesPacket;
 import org.jetbrains.annotations.NotNull;
 
@@ -66,4 +67,11 @@ public interface PacketListener {
      * @param packet Hello packet to handle
      */
     void handleHello(@NotNull HelloPacket packet);
+
+    /**
+     * Handle the hud settings packet.
+     *
+     * @param packet Settings packet to handle
+     */
+    void handleSettings(@NotNull SettingsPacket packet);
 }

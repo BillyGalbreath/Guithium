@@ -30,7 +30,7 @@ public abstract class AbstractScreen extends net.minecraft.client.gui.screens.Sc
         this.client = Minecraft.getInstance();
 
         screen.getElements().forEach(element -> {
-            AbstractWidget widget = RenderableWidget.create(client, this, element);
+            AbstractWidget widget = RenderableWidget.create(this.client, this, element);
             this.widgets.put(element.getKey(), widget);
         });
     }

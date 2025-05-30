@@ -1,6 +1,7 @@
 package net.pl3x.guithium.api;
 
 import net.pl3x.guithium.api.action.ActionRegistry;
+import net.pl3x.guithium.api.gui.hud.HudManager;
 import net.pl3x.guithium.api.gui.texture.TextureManager;
 import net.pl3x.guithium.api.network.NetworkHandler;
 import net.pl3x.guithium.api.player.PlayerManager;
@@ -62,6 +63,14 @@ public interface Guithium {
      */
     @NotNull
     ActionRegistry getActionRegistry();
+
+    /**
+     * Get the HUD manager instance.
+     *
+     * @return Hud manager
+     */
+    @NotNull
+    HudManager getHudManager();
 
     /**
      * Get the network handler instance.

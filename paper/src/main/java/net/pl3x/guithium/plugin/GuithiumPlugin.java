@@ -3,6 +3,7 @@ package net.pl3x.guithium.plugin;
 import java.lang.reflect.Field;
 import net.pl3x.guithium.api.Guithium;
 import net.pl3x.guithium.api.action.ActionRegistry;
+import net.pl3x.guithium.api.gui.hud.HudManager;
 import net.pl3x.guithium.api.gui.texture.TextureManager;
 import net.pl3x.guithium.plugin.listener.PaperListener;
 import net.pl3x.guithium.plugin.network.PaperNetworkHandler;
@@ -13,6 +14,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class GuithiumPlugin extends JavaPlugin implements Guithium {
     private final ActionRegistry actionRegistry = new ActionRegistry();
+    private final HudManager hudManager = new HudManager();
     private final PaperNetworkHandler networkHandler = new PaperNetworkHandler();
     private final PaperPlayerManager playerManager = new PaperPlayerManager();
     private final TextureManager textureManager = new TextureManager();
@@ -59,6 +61,12 @@ public class GuithiumPlugin extends JavaPlugin implements Guithium {
     @NotNull
     public ActionRegistry getActionRegistry() {
         return this.actionRegistry;
+    }
+
+    @Override
+    @NotNull
+    public HudManager getHudManager() {
+        return this.hudManager;
     }
 
     @Override

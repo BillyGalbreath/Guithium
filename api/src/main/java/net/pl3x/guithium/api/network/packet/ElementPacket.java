@@ -2,6 +2,7 @@ package net.pl3x.guithium.api.network.packet;
 
 import com.google.common.io.ByteArrayDataInput;
 import com.google.common.io.ByteArrayDataOutput;
+import java.util.Objects;
 import net.pl3x.guithium.api.gui.element.Element;
 import net.pl3x.guithium.api.json.Gson;
 import net.pl3x.guithium.api.key.Key;
@@ -35,8 +36,7 @@ public class ElementPacket extends Packet {
      * @param in Input byte array
      */
     public ElementPacket(@NotNull ByteArrayDataInput in) {
-        super(KEY);
-        this.element = Gson.fromJson(in.readUTF(), Element.class);
+        this(Objects.requireNonNull(Gson.fromJson(in.readUTF(), Element.class)));
     }
 
     /**
